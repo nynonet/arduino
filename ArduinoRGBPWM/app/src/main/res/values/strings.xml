@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LED RGB controle</string>
+
+    <string name="lbRed">Vermelho</string>
+    <string name="lbGre">Verde</string>
+    <string name="lbBlu">Azul</string>
+
+    <string name="lbConectar">Conectar Bluetooth</string>
+    <string name="lbDesConectar">Desconectar Bluetooth</string>
+
+    <string name="lbBlueNotCfg">Bluetooth não configurado!</string>
+    <string name="lbBlueCon">Bluetooth conectado em</string>
+
+    <string name="banner_ad_unit_id"></string>
+
+</resources>

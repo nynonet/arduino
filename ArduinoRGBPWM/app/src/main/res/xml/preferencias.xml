@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <PreferenceCategory
+        android:defaultValue="true"
+        android:title="Configurações"
+        >
+
+        <EditTextPreference
+            android:title="@string/lbRed"
+            android:key="cfgRed"
+            android:icon="@drawable/ic_red_24dp"
+            android:defaultValue="R">
+        </EditTextPreference>
+
+        <EditTextPreference
+            android:title="@string/lbGre"
+            android:key="cfgGre"
+            android:icon="@drawable/ic_gre_24dp"
+            android:defaultValue="G">
+        </EditTextPreference>
+
+        <EditTextPreference
+            android:title="@string/lbBlu"
+            android:key="cfgBlu"
+            android:icon="@drawable/ic_blu_24dp"
+            android:defaultValue="B">
+        </EditTextPreference>
+
+        <net.nynonet.BlueListPreference
+            android:title="Selecione o dispositivo bluetooth"
+            android:icon="@android:drawable/stat_sys_data_bluetooth"
+            android:key="cfgBlue"
+            >
+        </net.nynonet.BlueListPreference>
+
+    </PreferenceCategory>
+
+
+
+
+</PreferenceScreen>
