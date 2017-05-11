@@ -34,14 +34,16 @@ int traz = 10;
 int direita = 11;
 int esquerda = 12;
 
+int voltagem = 153; //para mandar 3v na porta pwm  
+
 int comando = "0";
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(frente, OUTPUT);
-  pinMode(traz, OUTPUT);
-  pinMode(direita, OUTPUT); 
-  pinMode(esquerda, OUTPUT); 
+//  pinMode(frente, OUTPUT);
+//  pinMode(traz, OUTPUT);
+//  pinMode(direita, OUTPUT); 
+//  pinMode(esquerda, OUTPUT); 
   Serial.begin(9600);
 }
 
@@ -54,38 +56,50 @@ void loop() {
   }
 
   if ( comando == 1 ) {
-    digitalWrite( frente, HIGH );
-    digitalWrite( traz, LOW );
+    analogWrite( frente, voltagem );
+    analogWrite( traz, LOW );
     Serial.println("Indo p/ frente");
+//    digitalWrite( frente, HIGH );
+//    digitalWrite( traz, LOW );
+//    Serial.println("Indo p/ frente");
   }
 
   if ( comando == 2 ) {
-    digitalWrite( frente, LOW );
-    digitalWrite( traz, HIGH );
+    analogWrite( frente, LOW );
+    analogWrite( traz, voltagem );
     Serial.println("Indo p/ traz");
+//    digitalWrite( frente, LOW );
+//    digitalWrite( traz, HIGH );
+//    Serial.println("Indo p/ traz");
   }
 
   if ( comando == 3 ) {
-    digitalWrite( direita, HIGH );
-    digitalWrite( esquerda, LOW );
+    analogWrite( direita, voltagem );
+    analogWrite( esquerda, LOW );
     Serial.println("Indo p/ direita");
+//    digitalWrite( direita, HIGH );
+//    digitalWrite( esquerda, LOW );
+//    Serial.println("Indo p/ direita");
   }
 
   if ( comando == 4 ) {
-    digitalWrite( direita, LOW );
-    digitalWrite( esquerda, HIGH );
+    analogWrite( direita, LOW );
+    analogWrite( esquerda, voltagem );
     Serial.println("Indo p/ esquerda");
+//    digitalWrite( direita, LOW );
+//    digitalWrite( esquerda, HIGH );
+//    Serial.println("Indo p/ esquerda");
   }
 
   if ( comando == 5 ) {
-    digitalWrite( frente, LOW );
-    digitalWrite( traz, LOW );
+    analogWrite( frente, LOW );
+    analogWrite( traz, LOW );
     Serial.println("desligando os motores frente e traz ");
   }
 
   if ( comando == 6 ) {
-    digitalWrite( direita, LOW );
-    digitalWrite( esquerda, LOW );
+    analogWrite( direita, LOW );
+    analogWrite( esquerda, LOW );
     Serial.println("desligando os motores direito e esquerdo ");
   }
   
