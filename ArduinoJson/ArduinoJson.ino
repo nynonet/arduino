@@ -50,7 +50,7 @@ void loop() {
  //Gera os dados do led pra enviar como JSON  1 = ligado; 0 = desligado
  String ledligado = "{\"titulo\":\"Led Ligado?\", \"valor\":\""+ String(!digitalRead(ligado)) + "\" }";
 
- //Gera os dados do led pra enviar como JSON  1 = ligado; 0 = desligado
+ //Gera gerar um texto com qualqure valor descrito. 
  String textoLivre = "{\"titulo\":\"Texto Livre\", \"valor\":\"Aqui posso também escrever um valor e enviar.\" }";
 
  
