@@ -36,14 +36,9 @@ int esquerda = 12;
 
 int voltagem = 153; //para mandar 3v na porta pwm  
 
-int comando = "0";
+int comando = 0;
 
 void setup() {
-  // put your setup code here, to run once:
-//  pinMode(frente, OUTPUT);
-//  pinMode(traz, OUTPUT);
-//  pinMode(direita, OUTPUT); 
-//  pinMode(esquerda, OUTPUT); 
   Serial.begin(9600);
 }
 
