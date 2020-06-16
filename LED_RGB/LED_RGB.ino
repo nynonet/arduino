@@ -40,7 +40,11 @@ void loop() {
   if (D == 'B') {
     analogWrite(B, Pow); //controla a cor azul
   }
-
+  
+  Serial.print( "letra: ");
+  Serial.print(  D ) ;
+  Serial.println( " valor = " + Pow );
+//  
   D = '-'; //muda a letra para sair do loop de repetção.
 
 }
